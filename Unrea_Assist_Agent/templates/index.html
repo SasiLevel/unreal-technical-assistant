@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unreal Technical Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='style.css') }}">
+</head>
+<body>
+    <div class="chat-app">
+        <header class="chat-header">
+            <h1>Unreal Technical Assistant</h1>
+            <button id="new-chat-button" class="new-chat-button" type="button">New Chat</button>
+        </header>
+
+        <main id="chat-history" class="chat-history"></main>
+
+        <form id="chat-form" class="chat-input-row">
+            <input
+                id="chat-input"
+                class="chat-input"
+                type="text"
+                placeholder="Ask a UE5 technical question..."
+                autocomplete="off"
+                required
+            >
+            <button id="send-button" class="send-button" type="submit">Send</button>
+        </form>
+    </div>
+
+    <script src="{{ url_for('static', path='app.js') }}"></script>
+</body>
+</html>
